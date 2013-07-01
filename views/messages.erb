@@ -4,9 +4,13 @@
     <title></title>
   </head>
   <body>
-    <div>
-
-    </div>
+    <% @messages.each do |message| %>
+      <div>
+        <p>From: <%= message.sender %></br>
+        To: <%= message.receiver %></br>
+        Message: <%= message.content %></p>
+      </div>
+    <% end %>
     <a href="/reset"><b>DELETE ALL MESSAGES</b></a>
   </body>
 </html>
